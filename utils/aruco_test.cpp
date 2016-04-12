@@ -152,7 +152,6 @@ int main(int argc, char **argv) {
         cv::Size sz = TheInputImage.size();
         MDetector.createCudaBuffers(sz.width, sz.height);
 
-        int cntr = 0;
         do {
 
             // copy image
@@ -199,8 +198,7 @@ int main(int argc, char **argv) {
             if (isVideoFile)
                 TheVideoCapturer.retrieve(TheInputImage);
 
-            cntr++;
-        } while (key != 27 && (TheVideoCapturer.grab() || !isVideoFile) && cntr < 40);
+        } while (key != 27 && (TheVideoCapturer.grab() || !isVideoFile));
 
     } catch (std::exception &ex)
 

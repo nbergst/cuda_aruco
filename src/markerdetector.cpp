@@ -207,7 +207,7 @@ void MarkerDetector::enableLockedCornersMethod(bool enable) {
 
     thres = thres_images[n_param1 / 2];
 
-    cv::imwrite("tnp.pgm",imgToBeThresHolded);
+//    cv::imwrite("tnp.pgm",imgToBeThresHolded);
 
     double t2 = cv::getTickCount();
     // find all rectangles in the thresholdes image
